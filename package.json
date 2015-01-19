@@ -1,0 +1,30 @@
+{
+  "name": "dialog-iframe-helper",
+  "version": "1.0.0",
+  "description": "当使用Dialog页面嵌入跨域iframe时，在iframe内使用这个组件进行跨域通信以便同步高度、关闭浮层等",
+  "keywords": [
+    "dialog",
+    "iframe",
+    "cross domain"
+  ],
+  "homepage": "http://aralejs.org/dialog",
+  "author": "shaoshuai0102 <shaoshuai0102@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aralejs/dialog-iframe-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aralejs/dialog-iframe-helper/issues"
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "index.js",
+    "dependencies": {
+      "arale-messenger": "2.1.0",
+      "json": "0.0.2"
+    },
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  }
+}
