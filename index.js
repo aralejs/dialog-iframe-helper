@@ -1,5 +1,4 @@
 var Messenger = require('arale-messenger');
-var JSON = require('json');
 
 var config = {
   autoFit: true
