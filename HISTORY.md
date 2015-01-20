@@ -4,4 +4,4 @@
 
 ## 1.0.0
 
-`new` It is the first version of dialog-iframe-helper.
+`new` It is the first version of arale-dialog-iframe-helper.

@@ -1,4 +1,4 @@
-# Dialog-iframe-helper Demo
+# arale-dialog-iframe-helper Demo
 
 ---
 

@@ -1,4 +1,4 @@
-# dialog-iframe-helper [![spm version](http://spmjs.io/badge/dialog-iframe-helper)](http://spmjs.io/package/dialog-iframe-helper)
+# arale-dialog-iframe-helper [![spm version](http://spmjs.io/badge/arale-dialog-iframe-helper)](http://spmjs.io/package/arale-dialog-iframe-helper)
 
 ---
 
@@ -9,7 +9,7 @@
 ## Install
 
 ```
-$ spm install dialog-iframe-helper --save
+$ spm install arale-dialog-iframe-helper --save
 ```
 
 ## API
@@ -25,7 +25,7 @@ $ spm install dialog-iframe-helper --save
 ## Usage
 
 ```js
-var helper = require('dialog-iframe-helper');
+var helper = require('arale-dialog-iframe-helper');
 
 $('#close').click(function () {
   helper.close();
