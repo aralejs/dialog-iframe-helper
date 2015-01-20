@@ -10,14 +10,15 @@
 ## Normal usage
 
 ````javascript
-seajs.use(['index', 'jquery'], function(helper, $) {
 
-  $('#close').click(function () {
-    helper.close();
-  });
+var helper = require('index');
+var $ = require('jquery');
 
-  $('#syncHeight').click(function () {
-    helper.syncHeight(300);
-  });
+$('#close').click(function () {
+  helper.close();
+});
+
+$('#syncHeight').click(function () {
+  helper.syncHeight(300);
 });
 ````
