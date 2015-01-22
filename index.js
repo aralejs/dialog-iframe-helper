@@ -5,15 +5,19 @@ var config = {
 };
 
 var messenger = new Messenger('iframe1', 'arale-dialog');
-messenger.addTarget(window.parent, 'parent');
-messenger.listen(function (message) {
-  var data = JSON.parse(message);
-  // TODO autoFit可配置，暂时先不做，估计需求不大
-});
+if (window.parent !== window) {
+  messenger.addTarget(window.parent, 'parent');
+  messenger.listen(function (message) {
+    var data = JSON.parse(message);
+    // TODO autoFit可配置，暂时先不做，估计需求不大
+  });
+}
 
 // send message to parent page
 function send (obj) {
-  messenger.targets['parent'].send(JSON.stringify(obj));
+  if (messenger.targets['parent']) {
+    messenger.targets['parent'].send(JSON.stringify(obj));
+  }
 }
 
 function getPageHeight() {
