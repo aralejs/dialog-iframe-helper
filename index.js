@@ -1,4 +1,5 @@
 var Messenger = require('arale-messenger');
+var debug = require('debug')('dialog-iframe-helper');
 
 var config = {
   autoFit: true
@@ -51,6 +52,7 @@ if (config.autoFit) {
       currentHeight = getPageHeight();
     } catch (e) {}
     if (currentHeight !== lastHeight) {
+      debug('currentHeight=' + currentHeight + ', lastHeight=' + lastHeight + ' => sync');
       syncHeight(currentHeight);
       lastHeight = currentHeight;
     }
