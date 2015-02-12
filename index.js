@@ -45,7 +45,15 @@ function syncHeight (h) {
   send({event: 'syncHeight', height: h});
 }
 
-if (config.autoFit) {
+function isInIframe () {
+  try {
+    return window.self !== window.top;
+  } catch (e) {
+    return true;
+  }
+}
+
+if (config.autoFit && isInIframe()) {
   var lastHeight, currentHeight;
   setInterval(function () {
     try {
