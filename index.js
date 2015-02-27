@@ -1,6 +1,6 @@
 var Messenger = require('arale-messenger');
 var debug = require('debug')('dialog-iframe-helper');
-var $ = require();
+var $ = require('jquery');
 
 var config = {
   autoFit: true
