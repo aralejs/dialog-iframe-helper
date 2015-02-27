@@ -1,5 +1,6 @@
 var Messenger = require('arale-messenger');
 var debug = require('debug')('dialog-iframe-helper');
+var $ = require();
 
 var config = {
   autoFit: true
@@ -21,24 +22,13 @@ function send (obj) {
   }
 }
 
-function getPageHeight() {
-  var D = document;
-  if (D.body.scrollHeight && D.documentElement.scrollHeight) {
-    return Math.min(D.body.scrollHeight, D.documentElement.scrollHeight);
-  } else if (D.documentElement.scrollHeight) {
-    return D.documentElement.scrollHeight;
-  } else if (D.body.scrollHeight) {
-    return D.body.scrollHeight;
-  }
-}
-
 function close () {
   send({event: 'close'});
 }
 
 function syncHeight (h) {
   if (!h) {
-    h = getPageHeight();
+    h = $(document).height();
   }
 
   h = h.toString().slice(-2) === 'px' ? h : h + 'px';
@@ -57,7 +47,7 @@ if (config.autoFit && isInIframe()) {
   var lastHeight, currentHeight;
   setInterval(function () {
     try {
-      currentHeight = getPageHeight();
+      currentHeight = $(document).height();
     } catch (e) {}
     if (currentHeight !== lastHeight) {
       debug('currentHeight=' + currentHeight + ', lastHeight=' + lastHeight + ' => sync');
