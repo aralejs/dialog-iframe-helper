@@ -57,5 +57,9 @@ if (config.autoFit && isInIframe()) {
   }, 200);
 }
 
+$(window).unload(function () {
+  syncHeight(10);
+});
+
 exports.close = close;
 exports.syncHeight = syncHeight;
